@@ -16,11 +16,12 @@ def representar_ruas():
         if(rua["aberta"]):
             simbolo = '|   |'
         else: simbolo = '| X |'
-    print(simbolo, end="  ")
+        print(simbolo, end="  ")
+    print()
 
 def representar_carros():
     for rua in ruas:
-        print(f"Rua {rua['nome']}: {rua['qtd_carros']} carros", end="  ")
+        print(f"Rua {rua['nome']}: {rua['qtd_carros']} carros")
         print("\n")
 
 def simular():
