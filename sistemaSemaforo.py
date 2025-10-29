@@ -86,8 +86,6 @@ def simular():
     """Executa a simulação principal do sistema de semáforos."""
     indice_aberto = 0
     while True:
-        # Alterna rua aberta
-        indice_aberto = atualizar_rua_aberta(indice_aberto)
         
         # Atualiza estado visual
         limpar_tela()
@@ -97,6 +95,9 @@ def simular():
         # Atualiza quantidades
         passar_carros_e_pedestres(ruas[indice_aberto])
         gerar_novos_carros_e_pedestres()
+        
+        # Alterna rua aberta
+        indice_aberto = atualizar_rua_aberta(indice_aberto)
 
         # Espera 1 segundo entre ciclos
         time.sleep(1)
